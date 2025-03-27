@@ -3,6 +3,14 @@ class SocialShare {
     private $facebook_app_id = 'YOUR_FACEBOOK_APP_ID';
     private $facebook_app_secret = 'YOUR_FACEBOOK_APP_SECRET';
 
+    public function getFacebookAppId() {
+        return $this->facebook_app_id;
+    }
+
+    public function getFacebookAppSecret() {
+        return $this->facebook_app_secret;
+    }
+
     // Get FB login url
    public function getFacebookLoginUrl() {
         $redirect_uri = 'http://yourdomain.com/fb-callback.php';
