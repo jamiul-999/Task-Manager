@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="text-center">Task Manager Login</h3>
+                        <h3 class="text-center">Task Manager</h3>
                     </div>
                     <div class="card-body">
                         <?php if (isset($error)): ?>
