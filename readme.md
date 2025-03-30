@@ -17,13 +17,13 @@ Install Xampp and Go to Xampp Control Panel
 After Installing:
 - Turn on Apache server and MySQL
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 - Go to the admin section in MySQL
 - Create a new database called "task_manager" and select collation type "utf8_general_ci"
 - Now go to the SQL section of your new database.
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 - Now execute the following SQL command
 
 ```sql
@@ -77,7 +77,7 @@ Now the database has been created.
     "user_id": 1
 }
 ```
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 ### Task Endpoints
 #### 1. Get All Tasks `GET /api/tasks`
@@ -100,7 +100,7 @@ Authorization: Bearer <token>
     }
 ]
 ```
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 #### 2. Create Task `POST /api/tasks`
 #### Headers
@@ -122,4 +122,4 @@ Content-Type: application/json
     "message": "Task created"
 }
 ```
-![alt text](image-4.png)
+![alt text](images/image-4.png)
