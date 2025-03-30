@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once 'models/User.php';
+require_once __DIR__ . '/../../models/User.php';
 
 if (User::isLoggedIn()) {
-    header('Location: dashboard.php');
+    header('Location: ../controllers/tasks/dashboard.php');
     exit();
 }
 
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $user = new User();
     if ($user->login($username, $password)) {
-        header('Location: dashboard.php');
+        header('Location: ../tasks/dashboard.php');
         exit();
     } else {
         $error = "Invalid username or password";

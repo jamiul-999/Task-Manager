@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-require_once 'models/User.php';
-require_once 'models/Task.php';
-require_once 'SocialShare.php';
+require_once __DIR__ . '/../../models/User.php';
+require_once __DIR__ . '/../../models/Task.php';
+require_once __DIR__ . '/../../models/SocialShare.php';
 
 // Login check
 if (!User::isLoggedIn()) {
-    header('Location: auth/login.php');
+    header('Location: ../auth/login.php');
     exit();
 }
 

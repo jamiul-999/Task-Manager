@@ -2,13 +2,13 @@
 
 session_start();
 
-require_once "models/User.php";
-require_once "models/Task.php";
-require_once "models/SocialShare.php";
+require_once __DIR__ . "/../../models/User.php";
+require_once __DIR__ . "/../../models/Task.php";
+require_once __DIR__ . "/../../models/SocialShare.php";
 
 // Login check
 if (!User::isLoggedIn()) {
-    header('Location: login.php');
+    header('Location: ../auth/login.php');
     exit();
 }
 
@@ -21,7 +21,7 @@ $social = new SocialShare();
 // Get task details
 $task_details = $task->getById($task_id);
 if (!$task_details || $task_details['user_id'] != $user['id']) {
-    header('Location: dashboard.php');
+    header('Location: ../tasks/dashboard.php');
     exit();
 }
 

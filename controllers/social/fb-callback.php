@@ -1,12 +1,12 @@
 <?php
 
 session_start();
-require_once "models/User.php";
-require_once "models/SocialShare.php";
+require_once __DIR__ . "/../../models/User.php";
+require_once __DIR__ . "/../../models/SocialShare.php";
 
 // Login check
 if (!User::isLoggedIn()) {
-    header("Location: auth/login.php");
+    header("Location: ../auth/login.php");
     exit();
 }
 
@@ -17,7 +17,7 @@ $user = new User();
 // Handle FB callback
 if (isset($_GET['code'])) {
     $code = $_GET['code'];
-    $redirect_uri = 'http://localhost.com/fb-callback.php';
+    $redirect_uri = 'http://localhost/TASK_MANAGER/controllers/social/fb-callback.php';
     
     $token_url = 'https://graph.facebook.com/v12.0/oauth/access_token?' . http_build_query([
         'client_id' => $social->getFacebookAppId(),
@@ -36,7 +36,7 @@ if (isset($_GET['code'])) {
     }
 }
 
-header("Location: tasks/dashboard.php");
+header("Location: ../tasks/dashboard.php");
 exit();
 
 ?>

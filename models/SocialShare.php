@@ -13,7 +13,7 @@ class SocialShare {
 
     // Get FB login url
    public function getFacebookLoginUrl() {
-        $redirect_uri = 'http://yourdomain.com/fb-callback.php';
+        $redirect_uri = 'http://localhost.com/fb-callback.php';
         
         $url = 'https://www.facebook.com/v12.0/dialog/oauth?' . http_build_query([
             'client_id' => $this->facebook_app_id,
