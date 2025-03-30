@@ -18,8 +18,8 @@ require_once __DIR__ . '/../config/Database.php';
 require_once __DIR__ . '/../models/User.php';
 require_once __DIR__ . '/../models/Task.php';
 
-require_once __DIR__ . '/auth.php';
-require_once __DIR__ . '/tasks.php';
+require_once __DIR__ . '/../controllers/auth/login.php';
+require_once __DIR__ . '/../controllers/tasks/dashboard.php';
 // Log in check
 
 
