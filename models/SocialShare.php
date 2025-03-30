@@ -1,7 +1,7 @@
 <?php
 class SocialShare {
-    private $facebook_app_id = 'YOUR_FACEBOOK_APP_ID';
-    private $facebook_app_secret = 'YOUR_FACEBOOK_APP_SECRET';
+    private $facebook_app_id = 'id';    // Needs to be configured
+    private $facebook_app_secret = 'secret';    // Needs to be configured
 
     public function getFacebookAppId() {
         return $this->facebook_app_id;

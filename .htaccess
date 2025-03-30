@@ -1,0 +1,10 @@
+# Enable the rewrite engine
+RewriteEngine On
+
+# If the request starts with /api, route it to the API index.php
+RewriteRule ^api(/.*)?$ api/index.php [L,QSA]
+
+# Keep standard routing for other requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L,QSA]
