@@ -53,7 +53,7 @@ Now the database has been created.
 
 ## Run the application
 - Clone the repository. Now go to the following URL:
-> http://localhost/TASK_MANAGER/controllers/auth/login.php
+> http://localhost/task_manager/public/
 - Now Log in:
 > User: Test  
 > Password: password

@@ -16,6 +16,9 @@ class User
     public function __construct()
     {
         $this->db = (new Database())->connect();
+        if ($this->db === null) {
+            throw new Exception("Database connection failed.");
+        }
     }
 
     // Login
