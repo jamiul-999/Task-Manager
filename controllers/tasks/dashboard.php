@@ -58,7 +58,7 @@ $fbLoginUrl = $social->getFacebookLoginUrl();
             <a class="navbar-brand" href="#">Task Manager</a>
             <div class="navbar-nav ms-auto">
                 <span class="navbar-text me-3">Welcome, <?php echo $user['username']; ?></span>
-                <a href="logout.php" class="btn btn-outline-light">Logout</a>
+                <a href="../auth/logout.php" class="btn btn-outline-light">Logout</a>
             </div>
         </div>
     </nav>
@@ -202,16 +202,7 @@ $fbLoginUrl = $social->getFacebookLoginUrl();
                             <?php endif; ?>
                         </div>
                         
-                        <div class="mb-3">
-                            <h6>Google My Business</h6>
-                            <?php if ($user['google_token']): ?>
-                                <p class="text-success"><i class="bi bi-check-circle-fill"></i> Connected</p>
-                            <?php else: ?>
-                                <a href="<?php echo $googleLoginUrl; ?>" class="btn btn-danger btn-sm">
-                                    <i class="bi bi-google"></i> Connect Google
-                                </a>
-                            <?php endif; ?>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
